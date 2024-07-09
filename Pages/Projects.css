@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcccb;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #d32f2f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+button, a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, a:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+.navbar-item:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero .cta-button {
+    padding: 1rem 2rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
